@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1">
+        <form class="w-50 mx-auto mt-5 mb-5 from1">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Product Id</label>
+            <input type="number" class="form-control" id="ids" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Product Name</label>
+            <input type="text" class="form-control" id="product" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Price</label>
+            <input type="number" class="form-control" id="prc" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Quantity</label>
+            <input type="number" class="form-control" id="qty" onchange="calculate()" />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Amount</label>
+            <input type="number" class="form-control" id="amnt" disabled />
+          </div>
+          <button type="button" class="btn btn-warning m-2" onclick="addData()">
+            Add
+          </button>
+        </form>
+      </div>
+      
+        <hr>
+      
+      <div class="cantainer">
+     <table bgcolor="#74bee9" width="100%">
+          <tr>
+            <td>
+              <H1>
+                <font color="white">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INVOICE</font>
+              </H1>
+            </td>
+            <td width="100"></td>
+            <td>
+              <font color="white"> +972-052-334-00000<br>
+                gorge@gmail.com <br>
+                israel@gmail.com</font>
+            </td>
+            <td>
+              <font color="white">Electronic LTD<br>
+                Center,Tel Aviv Israel <br>
+                77777</font>
+            </td>
+          </tr>
+        </table>
+        <br><br>
+      
+        <table>
+          <tr>
+            <td width="5%"> </td>
+            <td width="500">Billed To</td>
+            <td width="200">&nbsp;&nbsp;&nbsp;Invoice Number </td>
+            <td width="200">&nbsp;&nbsp;&nbsp;</td>
+            <td width="200">Invoice Total</td>
+          </tr>
+          <tr>
+            <td width="5%"> </td>
+            <td width="500">Client Number</td>
+            <td width="200">&nbsp;&nbsp;&nbsp; 10000001</td>
+            <td width="200"></td>
+            <td width="200" id="total-amount"><b>
+              </b></td>
+          </tr>
+      
+          <tr>
+            <td width="5%"> </td>
+            <td width="500">1 Client Adress</td>
+            <td width="200">&nbsp;&nbsp;&nbsp; </td>
+            <td width="200">&nbsp;&nbsp;&nbsp;</td>
+            <td width="200">&nbsp;&nbsp;&nbsp; </td>
+          </tr>
+          <tr>
+            <td width="5%"> </td>
+            <td width="500">City,State Country</td>
+            <td width="200">&nbsp;&nbsp;&nbsp; Date Of Issue</td>
+            <td width="200">&nbsp;&nbsp;&nbsp;</td>
+            <td width="200">&nbsp;&nbsp;&nbsp; </td>
+          </tr>
+          <tr>
+            <td width="10%"> </td>
+            <td width="500">ZIP CODE</td>
+            <td width="200">&nbsp;&nbsp;&nbsp;10/01/23</td>
+            <td width="200">&nbsp;&nbsp;&nbsp;</td>
+            <td width="200">&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+        </table>
+        <!-- lines -->
+        <hr />
+        <table class="table">
+          <thead id="tablehead">
+            <tr>
+              <th id="ids">Id</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody id="newtr">
+      
+          </tbody>
+      
+      
+        </table>
+        <hr>
+        <table class="table">
+          <tr>
+            <th width="20%"></th>
+            <th width="20%"> </th>
+            <th width="20%"></th>
+            <th width="20% "> Subtotal:</th>
+            <th width="20%" id="subtotal-amount"></th>
+          </tr>
+          <tr>
+            <th width="20%"></th>
+            <th width="20%"></th>
+            <th width="20%"></th>
+            <th width="20%"> Tax: </th>
+            <th width="20%">1.17%</th>
+          </tr>
+          <tr>
+            <th width="20%"></th>
+            <th width="20%"></th>
+            <th width="20%"></th>
+            <th width="20%"> Total Amount(ILS):</th>
+            <th width="20%" id="total"></th>
+          </tr>
+        </table>
+      </div>
+</body>
+</html>

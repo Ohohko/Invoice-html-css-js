@@ -1,0 +1,19 @@
+
+.div1 {
+    background-color: #74bee9;
+   }
+
+   label,
+   td,
+   th {
+     color: #000000;
+   }
+
+   #tablehead {
+     background-color: #74bee9;
+     color: black;
+   }
+
+   .cantainer{
+     background-image: url("https://source.unsplash.com/1600x900/?background");
+   }
